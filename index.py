@@ -6,7 +6,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import io
 
-data = pd.read_csv('data_pengisian_form.csv')
+data = pd.read_csv('Data_pengisian_form.csv')
 
 comment_columns = [col for col in data.columns if 'Berikan alasan terbaik' in col]
 platform_columns = [col for col in data.columns if 'Sejauh ini kakak sering bertanya di platform' in col]
