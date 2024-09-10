@@ -11,7 +11,7 @@ data = pd.read_csv('Data_pengisian_form.csv')
 comment_columns = [col for col in data.columns if 'Berikan alasan terbaik' in col]
 platform_columns = [col for col in data.columns if 'Sejauh ini kakak sering bertanya di platform' in col]
 
-st.title('Analisis Sentimen dan Visualisasi Data')
+st.title('Sentiment Analysts Opinion for User Feedback')
 
 selected_comment_col = st.selectbox('Pilih Kolom Komentar:', comment_columns)
 alasan_col = selected_comment_col
@@ -46,7 +46,7 @@ fig_sentiment_category = px.bar(sentiment_counts,
                                labels={'Sentiment_Category': 'Kategori Sentimen', 'Jumlah_Komentar': 'Jumlah Komentar'},
                                title='Distribusi Kategori Sentimen Komentar',
                                color='Sentiment_Category',
-                               color_discrete_map={'Positif': 'green', 'Negatif': 'red', 'Netral': 'gray'})
+                               color_discrete_map={'Positif': 'green ', 'Negatif': 'red', 'Netral': 'gray'})
 fig_sentiment_category.update_layout(xaxis_title='Kategori Sentimen', yaxis_title='Jumlah Komentar')
 st.plotly_chart(fig_sentiment_category)
 
